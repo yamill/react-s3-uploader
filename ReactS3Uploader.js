@@ -36,8 +36,8 @@ var ReactS3Uploader = React.createClass({
     },
 
     render: function() {
-        return this.transferPropsTo(
-            React.DOM.input({type: 'file', onChange: this.uploadFile})
+        return (
+            React.DOM.input({type: 'file', onChange: this.uploadFile, onProgress: this.props.onProgress, onFinish: this.props.onFinish, onError: this.props.onError})
         );
     }
 
